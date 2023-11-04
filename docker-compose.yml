@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  server:
+    build: ./server
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    command: npm run start
+  client:
+    build: ./client
+    expose:
+      - 3000
+    ports:
+      - 8080:3000
+    stdin_open: true
+    command: npm run start
