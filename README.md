@@ -3,13 +3,16 @@
 
 # To start the console
 - Clone this repo using : 
-### `git clone https://github.com/himanshu608/GalaxEyeConsole.git`
+`git clone https://github.com/himanshu608/GalaxEyeConsole.git`
 - Either spin up the full application using docker :
-### `docker-compose up --build`
+`docker-compose up --build`
 - Or run the front-end and back-end indivisually
-front-end: 
-### `cd client && npm i && npm run start`
-back-end
-### `cd server && npm i && npm run start`
+- front-end: 
+  `cd client && npm i && npm run start`
+- back-end
+  `cd server && npm i && npm run start`
+
+- ### Go to console pick up the shape [rectangle / polygon] from map draw options in top right corner. 
+- ### Start drawing your area of interest and corresponding satellite tiles will be shown to the map.
 
 
