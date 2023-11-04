@@ -14,5 +14,6 @@
 
 - ### Go to console pick up the shape [rectangle / polygon] from map draw options in top right corner. 
 - ### Start drawing your area of interest and corresponding satellite tiles will be shown to the map.
+# The console is accessible  on port: 8080
 
 
