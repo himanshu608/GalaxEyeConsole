@@ -7,7 +7,10 @@ import { fetchOverlappingTiles } from '../utils/maputils';
 
 
 const MapComponent = () => {
-    const [overlapingTilesData,setOverlapingTilesData] = useState({})
+    const [overlapingTilesData,setOverlapingTilesData] = useState({type: "FeatureCollection",
+    features: [
+        
+    ]})
     const map = useRef();
 
     // loading state to update interSecting Tiles
@@ -18,12 +21,14 @@ const MapComponent = () => {
         setIsloading(true);
         fetchOverlappingTiles(aoi)
         .then(data=>{
-            setOverlapingTilesData({
-                type: "FeatureCollection",
-                features: [
-                    ...data.tiles
+            setOverlapingTilesData((prev)=>({
+                ...overlapingTilesData,
+                ...overlapingTilesData.features = [
+                    ...prev.features,
+                    ...data.tile
                 ]
-            })
+                
+            }))
             setIsloading(false);
         })
         .catch(err => console.log("error occured: ",err))
